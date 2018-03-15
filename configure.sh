@@ -1,4 +1,4 @@
-1.11
+1.12
 
   --help                             print this message
 
@@ -26,7 +26,6 @@
   --with-threads                     enable thread pool support
 
   --with-file-aio                    enable file AIO support
-  --with-ipv6                        enable IPv6 support
 
   --with-http_ssl_module             enable ngx_http_ssl_module
   --with-http_v2_module              enable ngx_http_v2_module
@@ -114,8 +113,17 @@
   --with-stream                      enable TCP/UDP proxy module
   --with-stream=dynamic              enable dynamic TCP/UDP proxy module
   --with-stream_ssl_module           enable ngx_stream_ssl_module
+  --with-stream_realip_module        enable ngx_stream_realip_module
+  --with-stream_geoip_module         enable ngx_stream_geoip_module
+  --with-stream_geoip_module=dynamic enable dynamic ngx_stream_geoip_module
+  --with-stream_ssl_preread_module   enable ngx_stream_ssl_preread_module
   --without-stream_limit_conn_module disable ngx_stream_limit_conn_module
   --without-stream_access_module     disable ngx_stream_access_module
+  --without-stream_geo_module        disable ngx_stream_geo_module
+  --without-stream_map_module        disable ngx_stream_map_module
+  --without-stream_split_clients_module
+                                     disable ngx_stream_split_clients_module
+  --without-stream_return_module     disable ngx_stream_return_module
   --without-stream_upstream_hash_module
                                      disable ngx_stream_upstream_hash_module
   --without-stream_upstream_least_conn_module
@@ -128,6 +136,8 @@
 
   --add-module=PATH                  enable external module
   --add-dynamic-module=PATH          enable dynamic external module
+
+  --with-compat                      dynamic modules compatibility
 
   --with-cc=PATH                     set C compiler pathname
   --with-cpp=PATH                    set C preprocessor pathname
@@ -142,14 +152,6 @@
   --with-pcre=DIR                    set path to PCRE library sources
   --with-pcre-opt=OPTIONS            set additional build options for PCRE
   --with-pcre-jit                    build PCRE with JIT compilation support
-
-  --with-md5=DIR                     set path to md5 library sources
-  --with-md5-opt=OPTIONS             set additional build options for md5
-  --with-md5-asm                     use md5 assembler sources
-
-  --with-sha1=DIR                    set path to sha1 library sources
-  --with-sha1-opt=OPTIONS            set additional build options for sha1
-  --with-sha1-asm                    use sha1 assembler sources
 
   --with-zlib=DIR                    set path to zlib library sources
   --with-zlib-opt=OPTIONS            set additional build options for zlib
